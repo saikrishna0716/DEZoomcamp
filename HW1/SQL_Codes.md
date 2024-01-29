@@ -25,7 +25,7 @@ SELECT b."Borough"
 FROM yellow_taxi_trips a
 	,zones b
 WHERE a."PULocationID" = b."LocationID"
-	AND DATE (tpep_pickup_datetime) = '2021-01-01'
+	AND DATE (tpep_pickup_datetime) = '2019-09-18'
 GROUP BY b."Borough"
 HAVING sum(total_amount) > 50000
 ORDER BY 2 DESC limit 3;
